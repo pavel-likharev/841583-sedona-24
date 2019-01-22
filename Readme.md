@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Павел Лихарев](https://up.htmlacademy.ru/htmlcss/24/user/841583).
-* Наставник: `Неизвестно`.
+* Наставник: [Никита Рогатнев](https://htmlacademy.ru/profile/nikita_rogatnev)
 
 ---
 
