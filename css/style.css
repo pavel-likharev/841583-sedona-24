@@ -1,16 +1,37 @@
-body {
-  margin: 0;
-  padding: 0;
+html {
+  box-sizing: border-box;
+}
 
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body {
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 14px;
   line-height: 26px;
   font-weight: 400;
   color: #333333;
   text-transform: uppercase;
-
   background-color: #ffffff;
+}
 
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 a {
@@ -18,15 +39,32 @@ a {
 }
 
 .main-navigation {
-  line-height: 12px;
-  font-weight: bold;
-  color: #000000;
-
-  background-color: #ffffff;
+  display: flex;
+  width: 1200px;
+  margin: auto;
 }
 
 .site-navigation {
+  display: flex;
+  justify-content: space-between;
+  width: 1070px;
   list-style: none;
+  margin: 0 auto;
+  line-height: 26px;
+  font-weight: bold;
+  color: #000000;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 2px;
+  padding-right: 2px;
+  background-color: #ffffff;
+}
+
+.site-navigation li:nth-child(3) {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -60px;
 }
 
 .site-navigation a {
@@ -43,55 +81,71 @@ a {
 }
 
 .welcome-sedona {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
   width: 1200px;
-  height: 773px;
-
+  padding-top: 510px;
   background-color: #ffffff;
   background-image: url("../img/intro-welcome.svg"),
-                    url("../img/intro-mask.svg"),
-                    url("../img/background-photo.jpg");
-  background-position: center 75px,
-                       0 275px,
-                       0 -56px;
+    url("../img/intro-mask.svg"),
+    url("../img/background-photo.jpg");
+  background-position: center 100px,
+    0 455px,
+    left -55px;
   background-repeat: no-repeat;
   background-size: 460px 353px,
-                   1200px 59px,
-                   1200px 775px;
+    1200px 59px,
+    1200px 775px;
 }
 
-.about-sedona {
-  position: absolute;
-  bottom: 0;
-
+.container-white {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 1200px;
-  height: 216px;
-
-
-
+  padding-top: 60px;
   background-color: #ffffff;
 }
 
-.about-sedona h2 {
+.welcome-sedona h2 {
+  width: 450px;
   text-align: center;
-
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
-
   background-color: #ffffff;
 }
 
-.about-sedona p {
+.welcome-sedona p {
+  width: 490px;
   text-align: center;
-
   background-color: #ffffff;
 }
 
 .feature-true {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 1200px;
+  margin: auto;
   color: #ffffff;
-
   background-color: #81b3d2;
+}
+
+.about-true,
+.about-bridge {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  margin: auto;
+  text-align: center;
 }
 
 .feature-true h3 {
@@ -102,7 +156,19 @@ a {
 }
 
 .features-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  width: 1200px;
+  margin: 0 auto;
+  padding-top: 160px;
+  text-align: center;
   list-style: none;
+}
+
+.features-list li {
+  width: 310px;
 }
 
 .features-list h3 {
@@ -110,12 +176,45 @@ a {
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
+}
 
+.feature-house h3::before {
+  content: "";
+  position: absolute;
+  width: 75px;
+  height: 72px;
+  background-image: url("../img/icon-1.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.feature-food h3::before {
+  content: "";
+  position: absolute;
+  width: 74px;
+  height: 70px;
+  background-image: url("../img/icon-3.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.feature-souvenirs h3::before {
+  content: "";
+  position: absolute;
+  width: 64px;
+  height: 76px;
+  background-image: url("../img/icon-2.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 .feature-bridge {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  width: 1200px;
+  margin: auto;
   color: #ffffff;
-
   background-color: #81b3d2;
 }
 
@@ -130,9 +229,22 @@ a {
   background-color: #eeeeee;
 }
 
+.features-life .features-list {
+  padding-top: 0;
+}
+
+.search {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
 .search h3 {
   text-align: center;
-
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 30px;
   line-height: 36px;
@@ -144,15 +256,18 @@ a {
 }
 
 .button-call-form {
+  width: 570px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   text-align: center;
-
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
   color: #ffffff;
-
+  text-transform: uppercase;
   background-color: #766357;
+  border: none;
 }
 
 .button-call-form:hover,
@@ -162,13 +277,17 @@ a {
 
 .button-call-form:active {
   color: rgba(255, 255, 255, 0.3);
-
   background-color: #503e33;
+}
+
+.search-hotel-form {
+  display: flex;
+  flex-direction: column;
+  width: 570px;
 }
 
 .entry-field {
   text-align: left;
-
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 14px;
   line-height: 26px;
@@ -178,7 +297,6 @@ a {
 
 .half-entry-field {
   text-align: left;
-
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 14px;
   line-height: 26px;
@@ -186,13 +304,13 @@ a {
   color: #000000;
 }
 
-.entry-field:hover,
-.half-entry-field:hover {
+input[type=date]:hover,
+input[type=number]:hover {
   background-color: #ebebeb;
 }
 
-.entry-field:focus,
-.half-entry-field:focus {
+input[type=date]:focus,
+input[type=number]:focus {
   background-color: #ffffff;
   border: 2px solid #e5e5e5;
 }
@@ -201,12 +319,10 @@ a {
   font: inherit;
   background-color: #f2f2f2;
   border: none;
-
 }
 
 .number-people {
   text-align: center;
-
   font: inherit;
   background-color: #f2f2f2;
   border: none;
@@ -214,36 +330,39 @@ a {
 
 .button-number-minus,
 .button-number-plus,
-.button-call-calendar  {
+.button-call-calendar {
   background-color: #f2f2f2;
   border: none;
   fill: #a9a9a9;
 }
+
 .button-number-minus:hover,
 .button-number-plus:hover,
 .button-call-calendar:hover,
 .button-number-minus:focus,
 .button-number-plus:focus,
 .button-call-calendar:focus {
-    fill: #000000;
+  fill: #000000;
 }
 
 .button-number-minus:active,
 .button-number-plus:active,
 .button-call-calendar:active {
-    fill: #81b3d2;
+  fill: #81b3d2;
 }
 
 .button-search {
   text-align: center;
-
+  padding-top: 11px;
+  padding-bottom: 11px;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
   color: #ffffff;
-
+  text-transform: uppercase;
   background-color: #81b3d2;
+  border: none;
 }
 
 .button-search:hover,
@@ -253,74 +372,131 @@ a {
 
 .button-search:active {
   color: rgba(255, 255, 255, 0.3);
-
   background-color: #5496bd;
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 1200px;
+  margin: auto;
 }
 
 .tag a {
   text-align: center;
-
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
   color: #000000;
-
   background-color: #ffffff;
 }
 
 .footer-social ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 150px;
+  padding: 0;
+  margin: auto;
+  margin-top: 36px;
+  margin-bottom: 36px;
   list-style: none;
 }
 
-.footer-social svg {
+.social-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 48px;
   background-color: #81b3d2;
 }
 
-.social-button svg:hover,
-.social-button svg:focus {
+.social-button:hover,
+.social-button:focus {
   background-color: #669ec0;
 }
 
-.social-button svg:active {
+.social-button:active {
   background-color: #5496bd;
   fill: rgba(255, 255, 255, 0.3);
 }
 
+.developer {
+  display: flex;
+  width: 240px;
+  justify-content: center;
+  align-items: center;
+  margin-right: 75px;
+  margin-left: auto;
+}
 
 .developer span {
-  text-align: center;
-
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 14px;
   line-height: 26px;
   font-weight: 400;
   color: #000000;
-
   background-color: #ffffff;
 }
 
-.developer-button svg:hover,
-.developer-button svg:focus {
+.developer-button {}
+
+.developer-button:hover path,
+.developer-button:focus path {
   fill: #5496bd;
 }
 
-.developer-button svg:active {
-  fill: rgba(255, 255, 255, 0.3);
+.developer-button:active path {
+  fill: rgb(188, 188, 188);
 }
 
-.filters  {
+.filters {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
   color: #ffffff;
-
   background-image: url("../img/filter-background.jpg");
   background-position: left center;
   background-repeat: no-repeat;
   background-size: auto;
 }
 
+.detail-search-form {
+  display: flex;
+}
+
+.infrastructure {
+  display: flex;
+  width: 240px;
+  flex-direction: column;
+  margin-left: 70px;
+}
+
+.type-house {
+  display: flex;
+  width: 290px;
+  flex-direction: column;
+  margin-right: 200px;
+}
+
+.container-price {
+  display: flex;
+  flex-direction: column;
+  width: 330px;
+  margin-right: 70px;
+}
+
+.price {
+  display: flex;
+  width: 330px;
+  margin-right: 70px;
+}
+
 .filters .legend {
   text-align: left;
-
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 16px;
   line-height: 21px;
@@ -329,7 +505,6 @@ a {
 
 .button-detail-search {
   text-align: center;
-
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 14px;
   line-height: 21px;
@@ -337,28 +512,36 @@ a {
   color: #333333;
   text-transform: uppercase;
   color: #ffffff;
-
   background: transparent;
-  border: 2px solid #ffffff;
+  border: 1px solid #ffffff;
 }
 
 .button-detail-search:hover,
 .button-detail-search:focus {
-  color: #000000;  
-
+  color: #000000;
   background-color: #ffffff;
 }
 
 .result {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+  justify-content: space-between;
   text-align: left;
-
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
   color: #000000;
-
   background-color: #ffffff;
+}
+
+.sorting {
+  display: flex;
+}
+
+.sorting ul {
+  display: flex;
 }
 
 .sorting h4 {
@@ -378,7 +561,6 @@ a {
   line-height: 18px;
   font-weight: 400;
   color: rgba(0, 0, 0, 0.3);
-
   border-bottom: 1px dotted #81b3d2;
 }
 
@@ -387,7 +569,6 @@ a {
   line-height: 18px;
   font-weight: 400;
   color: #81b3d2;
-
   border-bottom: none;
 }
 
@@ -399,66 +580,73 @@ a {
   fill: #cacaca;
 }
 
+.catalog-list {
+  display: flex;
+  justify-content: center;
+  width: 1200px;
+  flex-direction: column;
+  margin: auto;
+}
+
+.catalog-hotel {
+  list-style: none;
+  width: 1200px;
+  border-top: 1px solid rgb(229, 229, 229);
+}
+
+.catalog-hotel:last-child {
+  border-bottom: 1px solid rgb(229, 229, 229);
+}
+
 .card-hotel h1 {
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
   color: #000000;
-
   background-color: #ffffff;
 }
 
 .catalog-hotel-type {
   text-align: center;
-
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
   color: #000000;
-
   background-color: #ffffff;
 }
 
 .catalog-hotel-price {
   text-align: center;
-
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
   color: #000000;
-
   background-color: #ffffff;
 }
 
 .button-more {
   width: 110px;
   height: 27px;
-
   text-align: center;
-
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
   color: #ffffff;
-
   background-color: #81b3d2;
 }
 
 .button-order {
   width: 142px;
   height: 27px;
-
   text-align: center;
-
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
   color: #ffffff;
-
   background-color: #766357;
 }
