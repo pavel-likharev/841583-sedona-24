@@ -6,6 +6,10 @@ html {
   box-sizing: inherit;
 }
 
+* {
+  outline: 1px dashed lightgrey;
+}
+
 body {
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 14px;
@@ -53,10 +57,11 @@ a {
   justify-content: space-between;
   width: 1200px;
   list-style: none;
-  margin: 0 auto;
+  margin: 0;
   line-height: 26px;
   font-weight: bold;
   color: #000000;
+  padding: 0;
   padding-top: 15px;
   padding-bottom: 15px;
   background-color: #ffffff;
@@ -72,15 +77,11 @@ a {
 .site-navigation li {
   width: 240px;
   text-align: center;
-  
 }
 
 .site-navigation li:nth-child(2) {
   margin-right: 240px;
 }
-
-
-
 
 .site-navigation a {
   color: #000000;
@@ -102,14 +103,17 @@ a {
   align-items: center;
   padding-top: 510px;
   background-color: #ffffff;
-  background-image: url("../img/intro-welcome.svg"),
+  background-image:
+    url("../img/intro-welcome.svg"),
     url("../img/intro-mask.svg"),
     url("../img/background-photo.jpg");
-  background-position: center 100px,
-    0 455px,
+  background-position:
+    center 100px,
+    0 453px,
     left -55px;
   background-repeat: no-repeat;
-  background-size: 460px 353px,
+  background-size:
+    460px 353px,
     1200px 59px,
     1200px 775px;
 }
@@ -120,12 +124,15 @@ a {
   justify-content: center;
   align-items: center;
   padding-top: 60px;
+  padding-bottom: 55px;
   width: 1200px;
   background-color: #ffffff;
 }
 
 .welcome-sedona h2 {
   width: 450px;
+  margin: 0;
+  margin-bottom: 30px;
   text-align: center;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 21px;
@@ -136,6 +143,7 @@ a {
 
 .welcome-sedona p {
   width: 490px;
+  margin: 0;
   text-align: center;
   background-color: #ffffff;
 }
@@ -143,8 +151,8 @@ a {
 .feature-true {
   display: flex;
   flex-direction: row;
-  justify-content: center;
-
+  padding: 0;
+  margin: 0;
   color: #ffffff;
   background-color: #81b3d2;
 }
@@ -155,8 +163,9 @@ a {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 300px;
-  margin: auto;
+  width: 400px;
+  margin: 0 auto;
+  padding: 0;
   text-align: center;
 }
 
@@ -167,19 +176,37 @@ a {
   font-weight: 700;
 }
 
+.answer {
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+/* Что-то я не знаю как обрезать без высоты  */
+.image-city {
+  display: flex;
+  align-items: center;
+  width: 800px;
+  height: 255px;
+  overflow: hidden;
+}
+
 .features-list {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-
+  position: relative;
+  margin: 0;
+  padding: 0;
   padding-top: 160px;
   text-align: center;
   list-style: none;
 }
 
-.features-list li {
-  width: 310px;
+.features li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+  padding-bottom: 85px;
 }
 
 .features-list h3 {
@@ -192,6 +219,8 @@ a {
 .feature-house h3::before {
   content: "";
   position: absolute;
+  top: 60px;
+  left: 162px;
   width: 75px;
   height: 72px;
   background-image: url("../img/icon-1.svg");
@@ -202,6 +231,8 @@ a {
 .feature-food h3::before {
   content: "";
   position: absolute;
+  top: 60px;
+  left: 563px;
   width: 74px;
   height: 70px;
   background-image: url("../img/icon-3.svg");
@@ -212,6 +243,8 @@ a {
 .feature-souvenirs h3::before {
   content: "";
   position: absolute;
+  top: 60px;
+  left: 968px;
   width: 64px;
   height: 76px;
   background-image: url("../img/icon-2.svg");
@@ -219,11 +252,15 @@ a {
   background-position: 0 0;
 }
 
+.features p {
+  width: 300px;
+  text-align: center;
+}
+
 .feature-bridge {
   display: flex;
   flex-direction: row-reverse;
   justify-content: center;
-
   color: #ffffff;
   background-color: #81b3d2;
 }
@@ -235,24 +272,57 @@ a {
   font-weight: 700;
 }
 
+.image-bridge {
+  display: flex;
+  align-items: center;
+  width: 800px;
+  height: 255px;
+  overflow: hidden;
+}
+
 .features-life {
   background-color: #eeeeee;
 }
 
 .features-life .features-list {
+  margin: 0;
   padding-top: 0;
+}
+
+.features-life li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+  padding-top: 50px;
+  padding-bottom: 75px;
+}
+
+.features-life h3 {
+  padding-left: 130px;
+  padding-right: 130px;
+}
+
+.features-life p {
+  padding-left: 65px;
+  padding-right: 65px;
+}
+
+.features-life .narrow {
+  padding-left: 75px;
+  padding-right: 75px;
 }
 
 .search {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-
   text-align: center;
 }
 
 .search h3 {
+  margin-top: 55px;
+  margin-bottom: 35px;
   text-align: center;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 30px;
@@ -261,6 +331,7 @@ a {
 }
 
 .search p {
+  margin-bottom: 50px;
   text-align: center;
 }
 
@@ -384,15 +455,27 @@ input[type=number]:focus {
   background-color: #5496bd;
 }
 
+.map {
+  position: relative;
+  top: 120px;
+}
+
 .main-footer {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  background-color: rgb(255, 255, 255);
+  opacity: 0.9;
+}
 
+.tag {
+  width: 240px;
+  margin-left: 70px;
 }
 
 .tag a {
-  text-align: center;
+  padding-left: 60px;
+  padding-right: 45px;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 21px;
   line-height: 26px;
@@ -407,7 +490,6 @@ input[type=number]:focus {
   align-items: center;
   width: 150px;
   padding: 0;
-  margin: auto;
   margin-top: 36px;
   margin-bottom: 36px;
   list-style: none;
@@ -433,15 +515,14 @@ input[type=number]:focus {
 }
 
 .developer {
-  display: flex;
+  position: relative;
   width: 240px;
-  justify-content: center;
-  align-items: center;
-  margin-right: 75px;
-  margin-left: auto;
+  margin-right: 70px;
 }
 
 .developer span {
+  padding-left: 15px;
+  padding-right: 150px;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 14px;
   line-height: 26px;
@@ -450,7 +531,11 @@ input[type=number]:focus {
   background-color: #ffffff;
 }
 
-.developer-button {}
+.developer-button {
+  position: absolute;
+  top: -5px;
+  left: 100px;
+}
 
 .developer-button:hover path,
 .developer-button:focus path {
@@ -463,7 +548,6 @@ input[type=number]:focus {
 
 .filters {
   display: flex;
-
   color: #ffffff;
   background-image: url("../img/filter-background.jpg");
   background-position: left center;
@@ -531,9 +615,27 @@ input[type=number]:focus {
 
 .result {
   display: flex;
-
   justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  margin-left: 70px;
+  margin-right: 70px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   text-align: left;
+}
+
+.found-result {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+
+.found-result h3 {
+  padding-left: 3px;
+  width: 160px;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 21px;
   line-height: 26px;
@@ -542,19 +644,28 @@ input[type=number]:focus {
   background-color: #ffffff;
 }
 
-.sorting {
-  display: flex;
-}
-
-.sorting ul {
-  display: flex;
-}
-
-.sorting h4 {
+.found-result h4 {
   font-size: 12px;
   line-height: 18px;
   font-weight: 400;
   color: #000000;
+}
+
+.choice-sorting {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  margin-left: 40px;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.choice-sorting li {
+  margin-right: 32px;
 }
 
 .result ul,
@@ -562,7 +673,7 @@ input[type=number]:focus {
   list-style: none;
 }
 
-.sorting a {
+.choice-sorting a {
   font-size: 12px;
   line-height: 18px;
   font-weight: 400;
@@ -570,7 +681,17 @@ input[type=number]:focus {
   border-bottom: 1px dotted #81b3d2;
 }
 
-.sorting .sorting-current {
+.choice-sorting a:hover,
+.choice-sorting a:focus {
+  color: #81b3d2
+}
+
+.choice-sorting a:active {
+  color: #111111;
+  border: none;
+}
+
+.sorting-current {
   font-size: 12px;
   line-height: 18px;
   font-weight: 400;
@@ -578,25 +699,51 @@ input[type=number]:focus {
   border-bottom: none;
 }
 
-.sorting-down {
+.sorting-icons {
+  display: flex;
+  justify-content: space-around;
+  width: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+.sorting-down path {
+  fill: #cacaca;
+}
+
+.sorting-up path {
+  fill: #cacaca;
+}
+
+.sorting-up:hover path,
+/* .sorting-down:hover path, */
+.sorting-up:focus path
+
+/* .sorting-down:focus path */
+  {
+  fill: #231f20
+}
+
+.sorting-up:active path
+
+/* .sorting-down:active path*/
+  {
   fill: #81b3d2;
 }
 
-.sorting-up {
-  fill: #cacaca;
+.current path {
+  fill: #81b3d2;
 }
 
 .catalog-list {
   display: flex;
-  justify-content: center;
-
   flex-direction: column;
-
+  margin: 0;
+  padding: 0;
 }
 
 .catalog-hotel {
   list-style: none;
-
   border-top: 1px solid rgb(229, 229, 229);
 }
 
@@ -604,7 +751,42 @@ input[type=number]:focus {
   border-bottom: 1px solid rgb(229, 229, 229);
 }
 
-.card-hotel h1 {
+.card-hotel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  margin-left: 70px;
+  margin-right: 70px;
+  padding: 0;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.container-hotel {
+  display: flex;
+  width: 530px;
+}
+
+.catalog-hotel-image {
+  width: 135px;
+  height: 90px;
+  margin: 0;
+}
+
+.discription-hotel {
+  display: flex;
+  flex-direction: column;
+  width: 260px;
+  padding-left: 30px;
+  padding-right: 105px;
+}
+
+.discription-hotel h2 {
+  width: 365px;
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 0;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 21px;
   line-height: 26px;
@@ -613,8 +795,39 @@ input[type=number]:focus {
   background-color: #ffffff;
 }
 
+.discription-hotel a:hover,
+.discription-hotel a:focus {
+  color: #81b3d2;
+}
+
+.discription-hotel a:active {
+  color: #b2b2b2;
+}
+
+.discription-hotel p {
+  margin: 0;
+  padding: 0;
+}
+
+.price-hotel {
+  width: 365px;
+  margin-bottom: 14px;
+}
+
 .catalog-hotel-type {
-  text-align: center;
+  margin-right: 37px;
+}
+
+.reservation {
+  display: flex;
+  justify-content: space-between;
+  width: 260px;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.catalog-hotel-type {
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 14px;
   line-height: 21px;
@@ -624,7 +837,6 @@ input[type=number]:focus {
 }
 
 .catalog-hotel-price {
-  text-align: center;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 14px;
   line-height: 21px;
@@ -636,23 +848,109 @@ input[type=number]:focus {
 .button-more {
   width: 110px;
   height: 27px;
-  text-align: center;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 4px;
+  padding-bottom: 4px;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 14px;
   line-height: 21px;
-  font-weight: 400;
+  font-weight: 700;
   color: #ffffff;
   background-color: #81b3d2;
+}
+
+.button-more:hover,
+.button-more:focus {
+  background-color: #669ec0;
+}
+
+.button-more:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #5496bd;
 }
 
 .button-order {
   width: 142px;
   height: 27px;
-  text-align: center;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #766357;
+}
+
+.button-order:hover,
+.button-order:focus {
+  background-color: #604e43;
+}
+
+.button-order:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #503e33;
+}
+
+.rating {
+  position: relative;
+  padding-top: 95px;
+}
+
+.rating span {
+  width: 110px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
-  color: #ffffff;
-  background-color: #766357;
+  background-color: #f2f2f2;
+}
+
+.hotel-amara {
+  position: relative;
+}
+
+.hotel-amara::before {
+  content: "";
+  width: 72px;
+  height: 17px;
+  position: absolute;
+  top: -65px;
+  right: 0;
+  background-image: url("../img/star.svg");
+}
+
+.hotel-quail-inn {
+  position: relative;
+}
+
+.hotel-quail-inn::before {
+  content: "";
+  width: 54px;
+  height: 17px;
+  position: absolute;
+  top: -65px;
+  right: 0;
+  background-image: url("../img/star.svg");
+}
+
+.hotel-villas {
+  position: relative;
+}
+
+.hotel-villas::before {
+  content: "";
+  width: 36px;
+  height: 17px;
+  position: absolute;
+  top: -65px;
+  right: 0;
+  background-image: url("../img/star.svg");
 }
