@@ -9,7 +9,7 @@
   <link href="css/style.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="inner-page">
   <div class="container-shadow">
     <header class="main-header">
       <nav class="main-navigation">
@@ -26,6 +26,7 @@
     </header>
 
     <main class="container">
+
       <h1 class="visually-hidden">Гостиницы</h1>
 
       <section class="filters">
@@ -35,16 +36,16 @@
           <div class="container-choice-hotel">
             <fieldset class="infrastructure">
               <legend>Инфраструктура:</legend>
-              <label for="pool"><input class="visually-hidden" type="checkbox" name="list-services" id="pool" value="pool" checked><span class="checkbox"></span> Бассейн</label>
-              <label for="parking"><input class="visually-hidden" type="checkbox" name="list-services" id="parking" value="parking"><span class="checkbox"></span> Парковка</label>
-              <label for="wi-fi"><input class="visually-hidden" type="checkbox" name="list-services" id="wi-fi" value="wi-fi"><span class="checkbox"></span> Wi-fi</label>
+              <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="list-services" id="pool" value="pool" checked><label for="pool">Бассейн</label>
+              <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="list-services" id="parking" value="parking"><label for="parking">Парковка</label>
+              <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="list-services" id="wi-fi" value="wi-fi"><label for="wi-fi">Wi-fi</label>
             </fieldset>
 
             <fieldset class="type-house">
               <legend>Тип жилья:</legend>
-              <label for="hotel"><input class="visually-hidden" type="checkbox" name="list-houses" id="hotel" value="hotel" checked><span class="checkbox"></span> Гостиница</label>
-              <label for="motel"><input class="visually-hidden" type="checkbox" name="list-houses" id="motel" value="motel" checked><span class="checkbox"></span>Мотель</label>
-              <label for="apartments"><input class="visually-hidden" type="checkbox" name="list-houses" id="apartments" value="apartments" checked><span class="checkbox"></span> Апартаменты</label>
+              <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="list-houses" id="hotel" value="hotel" checked><label for="hotel">Гостиница</label>
+              <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="list-houses" id="motel" value="motel" checked><label for="motel">Мотель</label>
+              <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="list-houses" id="apartments" value="apartments" checked><label for="apartments">Апартаменты</label>
             </fieldset>
           </div>
 
@@ -71,13 +72,13 @@
           <h3>Найдено:<span class="result-search"> 3</span></h3>
           <h4>Сортировка:</h4>
           <ul class="choice-sorting">
-            <li><a class="sorting-current" href="#">По цене</a></li>
+            <li><a class="sorting-current">По цене</a></li>
             <li><a href="#">По типу</a></li>
             <li><a href="#">По рейтингу</a></li>
           </ul>
         </div>
         <ul class="sorting-icons">
-          <li><a class="sorting-up" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
+          <li><a class="sorting-up"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
                 <path fill="#231F20" d="M5.5 0L0 10h11z" /></svg></a></li>
           <li><a class="sorting-down current" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
                 <path fill="#231F20" d="M5.5 10L0 0h11" /></svg></a></li>
@@ -148,7 +149,7 @@
                 <div class="discription-hotel">
                   <h1><a class="hotel-name" href="#">Villas at Poco Diablo</a></h1>
                   <div class="price-hotel">
-                    <span class="catalog-hotel-type">Аппартаменты</span>
+                    <span class="catalog-hotel-type">Апартаменты</span>
                     <span class="catalog-hotel-price">От 2000 Р.</span>
                   </div>
                   <p class="reservation">

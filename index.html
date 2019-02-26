@@ -10,7 +10,6 @@
 </head>
 
 <body>
-  <!-- Может быть этим дивом сделать тень по краю?  -->
   <div class="container-shadow">
     <header class="main-header">
       <nav class="main-navigation">
@@ -46,7 +45,7 @@
           <p class="answer">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
         </div>
         <div class="image-city">
-          <img src="img/street-sedona.jpg" width="800" height="255" alt="Улица города Седона">
+          <img src="img/street-sedona.jpg" width="800" height="401" alt="Улица города Седона">
         </div>
       </section>
 
@@ -69,12 +68,13 @@
 
       <section class="feature-bridge">
         <div class="about-bridge">
-          <h3>Там есть Мост дьявола</h3>
+          <h3>Там есть
+            Мост дьявола</h3>
           <span class="feature-number">— №2 —</span>
           <p class="answer">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
         </div>
         <div class="image-bridge">
-          <img src="img/devil-bridge.jpg" width="800" height="256" alt="Легендарный Мост дьявола">
+          <img src="img/devil-bridge.jpg" width="800" height="400" alt="Легендарный Мост дьявола">
         </div>
       </section>
 
@@ -100,7 +100,8 @@
 
       <section class="search">
         <h3>Заинтересовались?</h3>
-        <p class="search-info">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+        <p class="search-info">Укажите предполагаемые даты поездки,
+          и мы покажем вам лучшие предложения гостиниц в Седоне</p>
 
         <button class="button-call-form" type="button" name="call-form" id="call-form">Поиск гостиницы в Седоне</button>
         <div class="container-form">
@@ -110,7 +111,7 @@
             <div class="entry-field">
               <label for="date-arrival">Дата заезда:</label>
               <div class="arrival-form">
-                <input class="date" type="date" name="date-arrival" id="date-arrival" value="2017-04-24" required>
+                <input class="date" type="text" name="date-arrival" id="date-arrival" placeholder="24 апреля 2017" required>
                 <button class="button-call-calendar" type="button" name="call-calendar">
                   <svg xmlns="http://www.w3.org/2000/svg" width="21" height="22" viewBox="0 0 21 22">
                     <path d="M19.251 2.025h-2.845V.648c0-.381-.294-.689-.656-.689-.363 0-.656.308-.656.689v1.377h-3.938V.648c0-.381-.294-.689-.655-.689-.363 0-.657.308-.657.689v1.377H5.906V.648c0-.381-.294-.689-.656-.689-.363 0-.657.308-.657.689v1.377H1.75C.784 2.025 0 2.847 0 3.862v16.302C0 21.179.784 22 1.75 22h17.501c.966 0 1.749-.821 1.749-1.836V3.862c0-1.015-.783-1.837-1.749-1.837zm.437 18.139a.448.448 0 0 1-.437.459H1.75a.45.45 0 0 1-.438-.459V3.862a.45.45 0 0 1 .438-.459h2.844v1.378c0 .381.294.689.657.689.362 0 .656-.308.656-.689V3.403h3.938v1.378c0 .381.294.689.657.689.361 0 .655-.308.655-.689V3.403h3.938v1.378c0 .381.293.689.656.689.362 0 .656-.308.656-.689V3.403h2.845c.241 0 .437.206.437.459v16.302z" />
@@ -122,7 +123,7 @@
             <div class="entry-field">
               <label for="date-out">Дата выезда:</label>
               <div class="out-form">
-                <input class="date" type="date" name="date-out" id="date-out" value="2017-07-04" required>
+                <input class="date" type="text" name="date-out" id="date-out" placeholder="4 июля 2017" required>
                 <button class="button-call-calendar" type="button" name="call-calendar">
                   <svg xmlns="http://www.w3.org/2000/svg" width="21" height="22" viewBox="0 0 21 22">
                     <path d="M19.251 2.025h-2.845V.648c0-.381-.294-.689-.656-.689-.363 0-.656.308-.656.689v1.377h-3.938V.648c0-.381-.294-.689-.655-.689-.363 0-.657.308-.657.689v1.377H5.906V.648c0-.381-.294-.689-.656-.689-.363 0-.657.308-.657.689v1.377H1.75C.784 2.025 0 2.847 0 3.862v16.302C0 21.179.784 22 1.75 22h17.501c.966 0 1.749-.821 1.749-1.836V3.862c0-1.015-.783-1.837-1.749-1.837zm.437 18.139a.448.448 0 0 1-.437.459H1.75a.45.45 0 0 1-.438-.459V3.862a.45.45 0 0 1 .438-.459h2.844v1.378c0 .381.294.689.657.689.362 0 .656-.308.656-.689V3.403h3.938v1.378c0 .381.294.689.657.689.361 0 .655-.308.655-.689V3.403h3.938v1.378c0 .381.293.689.656.689.362 0 .656-.308.656-.689V3.403h2.845c.241 0 .437.206.437.459v16.302z" />
@@ -139,7 +140,7 @@
                     <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24">
                       <path d="M0 9h24v6h-24z" /></svg>
                   </button>
-                  <input class="number-people" type="number" name="adults" id="adults" value="2" min="1" max="99" step="1">
+                  <input class="number-people" type="text" name="adults" id="adults" placeholder="2">
                   <button class="button-number-plus" type="button" name="number-plus">
                     <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24">
                       <path d="M24 9h-9v-9h-6v9h-9v6h9v9h6v-9h9z" /></svg>
@@ -154,7 +155,7 @@
                     <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24">
                       <path d="M0 9h24v6h-24z" /></svg>
                   </button>
-                  <input class="number-people" type="number" name="children" id="children" value="0" min="0" max="99" step="1">
+                  <input class="number-people" type="text" name="children" id="children" placeholder="0">
                   <button class="button-number-plus" type="button" name="number-plus">
                     <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24">
                       <path d="M24 9h-9v-9h-6v9h-9v6h9v9h6v-9h9z" /></svg>
@@ -167,8 +168,9 @@
 
           </form>
         </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d74070.9632807247!2d-111.77612706198006!3d34.86866423149451!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1551108337887"
+          width="1200" height="594" style="border:0" allowfullscreen></iframe>
 
-        <img class="map" src="img/map-sedona.jpg" width="1200" height="600" alt="Карта проезда к городу Седона">
 
       </section>
     </main>
@@ -212,6 +214,7 @@
       </div>
     </footer>
   </div>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
