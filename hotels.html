@@ -6,7 +6,7 @@
   <title>HTML Academy: Отели "Седона"</title>
   <link href="css/normalize.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
 </head>
 
 <body class="inner-page">
@@ -31,7 +31,7 @@
 
       <section class="filters">
         <h2 class="visually-hidden">Расширенный поиск жилья</h2>
-        <form class="detail-search-form" action="https://echo.htmlacademy.ru" method="get" oninput="start_price.value=start_range.value">
+        <form class="detail-search-form" action="https://echo.htmlacademy.ru" method="post" oninput="start_price.value=start_range.value">
 
           <div class="container-choice-hotel">
             <fieldset class="infrastructure">
@@ -51,16 +51,20 @@
 
           <div class="container-price">
             <fieldset class="price">
-              <legend>Стоимость в сутки (Р):</legend>
+              <legend>Стоимость в сутки (р):</legend>
               <div class="price-choice">
-                <span>От <output name="start_price">0</output></span>
-                <span>До <output name="finish_price">3000</output></span>
+                <label class="min-price">От <input type="text" name="min-price" value="0"></label>
+                <label class="max-price">До <input type="text" name="max-price" value="3000"></label>
               </div>
-              <div class="range-price">
-                <input type="range" name="start_range" value="0" min="0" max="5000" step="100">
-                <input type="range" name="finish_range" value="3000" min="0" max="5000" step="100">
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar"></div>
+                </div>
+                <div class="range-toggle range-toggle-min"></div>
+                <div class="range-toggle range-toggle-max"></div>
               </div>
             </fieldset>
+
             <input class="button-detail-search" type="submit" name="start-detail-search" value="Показать">
           </div>
 
