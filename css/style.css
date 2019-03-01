@@ -15,6 +15,13 @@ body {
   text-transform: uppercase;
 
   background-color: #f2f2f2;
+}
+
+.container-shadow {
+  width: 1200px;
+  margin: 0 auto;
+
+  background-color: #d4edfc;
   background-image:
     url("../img/intro-welcome.svg"),
     url("../img/intro-mask.svg"),
@@ -31,21 +38,16 @@ body {
     459px 353px,
     1200px 59px,
     1200px 800px;
+
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.22);
 }
 
-.inner-page {
-  background-color: #f2f2f2;
+.inner-page .container-shadow  {
+  background-color: #315770;
   background-image: url("../img/filter-background.jpg");
   background-position: center -238px;
   background-repeat: no-repeat;
   background-size: 1200px 800px;
-}
-
-.container-shadow {
-  width: 1200px;
-  margin: 0 auto;
-
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.22);
 }
 
 .container {
@@ -263,7 +265,7 @@ a.site-navigation-current {
   width: 800px;
   overflow: hidden;
 
-  background-color: #f1eeef;
+  background-color: #946c67;
 }
 
 .image-city img {
@@ -399,7 +401,7 @@ a.site-navigation-current {
   width: 800px;
   overflow: hidden;
 
-  background-color: #eb8e65;
+  background-color: #786455;
 }
 
 .image-bridge img {
@@ -522,12 +524,15 @@ a.site-navigation-current {
   z-index: 1;
   top: 289px;
 
-  display: none;
   width: 568px;
   margin: 0;
 
   background-color: #ffffff;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);
+}
+
+.container-form-close {
+  display: none;
 }
 
 .container-form-show {
@@ -583,6 +588,10 @@ a.site-navigation-current {
   font: inherit;
   text-transform: uppercase;
   color: #000000;
+}
+
+.search-hotel-form input[type=text] {
+  height: 38px;
 }
 
 .date {
@@ -741,10 +750,10 @@ input[type=text]:focus {
   background-color: #5496bd;
 }
 
-iframe {
+.map-sedona {
   margin-bottom: -120px;
 
-  background-color: : #f2f0eb;
+  background-color: #f2f0eb;
   background-image: url("../img/map-sedona.jpg");
   background-image: 1200px 594px;
   background-repeat: no-repeat;
@@ -760,6 +769,10 @@ iframe {
 
   background-color: rgb(255, 255, 255);
   opacity: 0.9;
+}
+
+.inner-page .main-footer {
+  opacity: 1;
 }
 
 .tag {
@@ -948,6 +961,21 @@ iframe {
   background-size: 23px 23px;
 }
 
+.filter-input-checkbox:disabled+label::before {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  top: -1px;
+
+  width: 23px;
+  height: 23px;
+
+  background-image: url("../img/checkbox-off-disabled.svg");
+  background-repeat: no-repeat;
+  background-size: 23px 23px;
+}
+
 .filter-input-checkbox:checked+label::after {
   content: "";
 
@@ -959,6 +987,21 @@ iframe {
   height: 23px;
 
   background-image: url("../img/checkbox-on.svg");
+  background-repeat: no-repeat;
+  background-size: 27px 23px;
+}
+
+.filter-input-checkbox:checked:disabled+label::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  top: -1px;
+
+  width: 27px;
+  height: 23px;
+
+  background-image: url("../img/checkbox-on-disabled.svg");
   background-repeat: no-repeat;
   background-size: 27px 23px;
 }
@@ -1024,6 +1067,7 @@ iframe {
 
 .price-choice input {
   width: 50px;
+  height: 24px;
   margin: 0;
 
   color: inherit;
@@ -1302,6 +1346,18 @@ a.current path {
   padding: 0;
 }
 
+.catalog-hotel-image.amara {
+  background-color: #7a5563;
+}
+
+.catalog-hotel-image.quail-inn {
+  background-color: #adb1c3;
+}
+
+.catalog-hotel-image.villas {
+  background-color: #7e8e54;
+}
+
 .discription-hotel {
   display: flex;
   width: 260px;
@@ -1454,6 +1510,7 @@ a.current path {
   padding-top: 2px;
   padding-bottom: 2px;
   padding-left: 2px;
+  vertical-align: baseline;
 
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 14px;

@@ -6,6 +6,10 @@ var out = search.querySelector("[name=date-out]");
 var adults = search.querySelector("[name=adults]");
 var children = search.querySelector("[name=children]");
 
+window.onload = function() {
+     search.classList.add("container-form-close");
+};
+
 button.addEventListener("click", function (evt) {
   evt.preventDefault();
   search.classList.toggle("container-form-show");
