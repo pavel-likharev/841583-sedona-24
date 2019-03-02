@@ -890,7 +890,7 @@ input[type=text]:focus {
   border: none;
 }
 
-.detail-search-form legend {
+.detail-search-form h3 {
   padding: 0;
   margin: 0;
   margin-bottom: 25px;
@@ -931,7 +931,7 @@ input[type=text]:focus {
 
 .infrastructure {
   display: flex;
-  min-width: 240px;
+  width: 240px;
   flex-direction: column;
   margin: 0;
   padding: 0;
@@ -939,7 +939,7 @@ input[type=text]:focus {
 
 .type-house {
   display: flex;
-  min-width: 288px;
+  width: 288px;
   flex-direction: column;
   margin: 0;
   margin-left: 14px;
