@@ -1668,7 +1668,7 @@ a.current path {
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
-  color: #000000;
+  color: #333333;
   background-color: #ffffff;
 }
 
@@ -1678,7 +1678,7 @@ a.current path {
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
-  color: #000000;
+  color: #333333;
   background-color: #ffffff;
 }
 
@@ -1766,6 +1766,7 @@ a.current path {
   line-height: 21px;
   font-weight: 400;
   text-align: center;
+  color: #333333;
 
   background-color: #f2f2f2;
 }
