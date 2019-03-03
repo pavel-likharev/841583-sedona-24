@@ -158,21 +158,27 @@ a.site-navigation-current {
 
   background-color: #d4edfc;
   background-image:
-    url("../img/intro-welcome.svg"),
     url("../img/intro-mask.svg"),
     url("../img/background-photo.jpg");
   background-position:
-    center 132px,
     center 508px,
     center -27px;
   background-repeat:
     no-repeat,
-    no-repeat,
     no-repeat;
   background-size:
-    459px 353px,
     1200px 59px,
     1200px 800px;
+}
+
+.background-sedona img {
+  position: absolute;
+  top: 132px;
+  left: 50%;
+
+  width: 459px;
+  height: 353px;
+  margin-left: -230px;
 }
 
 .welcome-sedona {
