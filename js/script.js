@@ -12,6 +12,7 @@ window.onload = function() {
 
 button.addEventListener("click", function (evt) {
   evt.preventDefault();
+  search.classList.remove("form-error");
   search.classList.toggle("container-form-show");
   arrival.focus();
 });
